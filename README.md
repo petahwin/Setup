@@ -29,7 +29,10 @@ Languages/utilities
 ===================
 
 ###curl
-```bash sudo apt-get install curl```
+```bash
+sudo apt-get install curl
+```
+
 ###Node/npm
 ####For Ubuntu
 ```bash 
