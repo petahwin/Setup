@@ -31,12 +31,31 @@ Languages/utilities
 curl -sL https://deb.nodesource.com/setup | sudo bash -
 sudo apt-get install nodejs
 ```
-###Ruby
+###Ruby/Rails
 ####Using rbenv
+https://github.com/sstephenson/rbenv#command-reference
 ```bash
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 # Restart the shell for PATH changes to take effect
 type rbenv
+
+# To enable access to the rbenv install command
+git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+# To update ruby-build, run git pull to download the latest changes.
+
+# install a version of Ruby
+rbenv install [version no.]
+rbenv global [version no.] # to set all shell versions of Ruby used to version no.
+ruby -v # test that correct Ruby has been set
+
+gem install rails
+rbenv rehash # to make rails executable available; 
+             # also run this rehash whenever 
+             # installing anything w/ executables
+rails -v # check if this executes, to confirm that it worked
+
 ```
+####Using rvm
+http://rvm.io/rvm/install#explained
