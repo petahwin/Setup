@@ -14,10 +14,15 @@ Software
 sudo add-apt-repository ppa:webupd8team/sublime-text-2
 sudo apt-get install sublime-text
 ```
+###Vim
+```bash
+sudo apt-get install vim
+```
 
-###Chrome (optional)
+###Chrome
+https://www.google.com/chrome/browser/
+
 ###FTP Client 
-
 (FireFTP, WinSCP, cyberduck, Sublime Text SFTP Plugin)
 
 Languages/utilities
@@ -55,7 +60,7 @@ rbenv rehash # to make rails executable available;
              # also run this rehash whenever 
              # installing anything w/ executables
 rails -v # check if this executes, to confirm that it worked
-
 ```
+
 ####Using rvm
 http://rvm.io/rvm/install#explained
