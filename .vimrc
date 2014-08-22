@@ -12,6 +12,10 @@ set nofoldenable
 set foldlevel=1
 set mouse=a
 set colorcolumn=80,100
+" leader var stuff
+let mapleader=','
+map <leader><leader> <C-w><C-w>
+
 
 " gvim settings
 colorscheme desert
