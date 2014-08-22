@@ -33,6 +33,11 @@ Languages/utilities
 sudo apt-get install curl
 ```
 
+###git
+```bash
+sudo apt-get install git
+```
+
 ###Node/npm
 ####For Ubuntu
 ```bash 
