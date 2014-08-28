@@ -44,6 +44,20 @@ sudo apt-get install git
 curl -sL https://deb.nodesource.com/setup | sudo bash -
 sudo apt-get install nodejs
 ```
+
+###MySQL
+```bash
+sudo apt-get install mysql-server mysql-client libmysqlclient-dev
+```
+
+###PostgreSQL
+```bash
+sudo apt-get install postgresql postgresql-contrib
+sudo -i -u postgres
+createuser --interactive
+createdb [username]
+```
+
 ###Ruby/Rails
 ####Using rbenv
 https://github.com/sstephenson/rbenv#command-reference
