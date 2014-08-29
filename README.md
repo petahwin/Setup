@@ -77,6 +77,10 @@ rbenv install [version no.]
 rbenv global [version no.] # to set all shell versions of Ruby used to version no.
 ruby -v # test that correct Ruby has been set
 
+# Create a '.gemrc' file in the home directory and add the following line:
+# gem: --no-ri --no-rdoc
+# This speeds up rails installation significantly
+
 gem install rails
 rbenv rehash # to make rails executable available; 
              # also run this rehash whenever 
