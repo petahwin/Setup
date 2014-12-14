@@ -1,3 +1,4 @@
+set noswapfile
 set smartindent
 set shiftwidth=4
 set softtabstop=4
@@ -14,6 +15,8 @@ set nofoldenable
 set mouse=a
 set colorcolumn=80,100
 set clipboard=unnamedplus
+set splitright
+set splitbelow
 " map z za
 
 " leader var stuff
