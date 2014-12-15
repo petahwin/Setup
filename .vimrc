@@ -14,6 +14,7 @@ set nofoldenable
 " set foldlevel=1
 set mouse=a
 set colorcolumn=80,100
+set cursorline
 set clipboard=unnamedplus
 set splitright
 set splitbelow
