@@ -24,7 +24,7 @@ set splitbelow
 let mapleader=','
 map <leader><leader> <C-w><C-w>
 map <leader>. gt
-map t :tabnew<CR>
+map <C-t> :tabnew<CR>
 
 " gvim settings
 colorscheme desert
