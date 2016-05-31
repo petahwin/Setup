@@ -2,8 +2,12 @@
 setopt noautomenu
 
 autoload -Uz colors && colors
+autoload -Uz compinit && compinit
 
 RPROMPT="%2~"
+
+# Reable reverse search
+bindkey '^R' history-incremental-search-backward
 
 # For vi mode specification
 bindkey -v
