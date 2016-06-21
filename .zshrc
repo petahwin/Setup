@@ -7,7 +7,10 @@ autoload edit-command-line; zle -N edit-command-line
 
 RPROMPT="%2~"
 
-# Reable reverse search
+# Enable reverse search
+HISTFILE=~/.zsh_history
+HISTSIZE=1500
+SAVEHIST=1500
 bindkey '^R' history-incremental-search-backward
 
 # For vi mode specification
