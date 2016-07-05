@@ -3,6 +3,7 @@ set smartindent
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+set ruler
 set nu
 syntax on
 set ignorecase
