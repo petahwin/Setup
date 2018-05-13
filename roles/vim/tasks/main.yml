@@ -1,0 +1,11 @@
+- name: vim | Install 'vim'
+  pacman:
+    name: vim
+    state: present
+
+- name: vim | Set '.vimrc' file to user's home dir
+  copy:
+    src: vimrc
+    dest: /home/peter/.vimrc
+    owner: peter
+    group: peter

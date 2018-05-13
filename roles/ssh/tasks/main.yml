@@ -1,0 +1,9 @@
+- name: ssh | Install 'openssh' to machine
+  pacman:
+    name: openssh
+    state: present
+- name: ssh | Enable ssh server daemon
+  systemd:
+    name: sshd.service
+    enabled: true
+    state: started

@@ -1,92 +1,16 @@
-Setup
-=====
-*Last edited: 22 Friday August 2014*
+# Setup
+Configuration to be run on any new development machine, driven by Ansible.
 
-Remember to run ```sudo apt-get update``` first!!!
+## Installation
+Currently, the only installation step on Arch Linux is to execute `sudo pacman -S ansible` This should pull in the necessary dependencies.
 
-Unix Box configuration/setup
+## How to Run
+`ansible-playbook -K playbook.yml`
 
-Software
-========
+## TODO
+- User creation and templatize the user name in the roles
+	- Toggle user creation on/off
+- Create script to install dependencies for Ansible
+- Create wrapper script to execute Ansible playbook
+- More graceful specification of localhost target for playbook
 
-###Sublime Text
-```bash
-sudo add-apt-repository ppa:webupd8team/sublime-text-2
-sudo apt-get install sublime-text
-```
-###Vim
-```bash
-sudo apt-get install vim
-```
-
-###Chrome
-https://www.google.com/chrome/browser/
-
-###FTP Client 
-(FireFTP, WinSCP, cyberduck, Sublime Text SFTP Plugin)
-
-Languages/utilities
-===================
-
-###curl
-```bash
-sudo apt-get install curl
-```
-
-###git
-```bash
-sudo apt-get install git
-```
-
-###Node/npm
-####For Ubuntu
-```bash 
-curl -sL https://deb.nodesource.com/setup | sudo bash -
-sudo apt-get install nodejs
-```
-
-###MySQL
-```bash
-sudo apt-get install mysql-server mysql-client libmysqlclient-dev
-```
-
-###PostgreSQL
-```bash
-sudo apt-get install postgresql postgresql-contrib
-sudo -i -u postgres
-createuser --interactive
-createdb [username]
-```
-
-###Ruby/Rails
-####Using rbenv
-https://github.com/sstephenson/rbenv#command-reference
-```bash
-git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-# Restart the shell for PATH changes to take effect
-type rbenv
-
-# To enable access to the rbenv install command
-git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-# To update ruby-build, run git pull to download the latest changes.
-
-# install a version of Ruby
-rbenv install [version no.]
-rbenv global [version no.] # to set all shell versions of Ruby used to version no.
-ruby -v # test that correct Ruby has been set
-
-# Create a '.gemrc' file in the home directory and add the following line:
-# gem: --no-ri --no-rdoc
-# This speeds up rails installation significantly
-
-gem install rails
-rbenv rehash # to make rails executable available; 
-             # also run this rehash whenever 
-             # installing anything w/ executables
-rails -v # check if this executes, to confirm that it worked
-```
-
-####Using rvm
-http://rvm.io/rvm/install#explained

@@ -7,15 +7,16 @@ autoload edit-command-line; zle -N edit-command-line
 
 RPROMPT="%2~"
 
+# For vi mode specification
+bindkey -v
+bindkey -M vicmd v edit-command-line
+
 # Enable reverse search
 HISTFILE=~/.zsh_history
 HISTSIZE=1500
 SAVEHIST=1500
-bindkey '^R' history-incremental-search-backward
+bindkey '^R' history-incremental-search-backward # Seems to only work after vi mode settings
 
-# For vi mode specification
-bindkey -v
-bindkey -M vicmd v edit-command-line
 
 export KEYTIMEOUT=3  # lowers the lag time to switch to normal mode
 function zle-line-init zle-keymap-select {
@@ -30,4 +31,4 @@ zle -N zle-keymap-select
 
 # Alias
 alias ..="cd .."
-
+alias ls="ls --color"

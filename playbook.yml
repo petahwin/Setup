@@ -1,0 +1,17 @@
+- hosts: localhost
+  become: yes
+  tasks:
+    - name: TEST | Set user name
+      command: whoami
+      register: username_output
+      become: no
+    - name: TEST | Show user name
+      debug:
+        msg: '{{ username_output.stdout }}'
+  roles:
+    - shell
+    - ssh
+    - vim
+    - tmux
+    - utils
+    - lang
