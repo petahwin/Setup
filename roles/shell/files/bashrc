@@ -1,6 +1,6 @@
-alias ..="cd .."
-STARTCOLOR='\e[0;32m'; ENDCOLOR='\e[0m'
-export PS1="\[$STARTCOLOR\]\w:\[$ENDCOLOR\]\#\[$STARTCOLOR\]> \[$ENDCOLOR\]"
+COLOR_RAND=$(( ${RANDOM} % 7 + 1 ))
+STARTCOLOR="\e[38;5;${COLOR_RAND}m"; ENDCOLOR='\e[0m'
+export PS1="\[$STARTCOLOR\][\h]\w:\[$ENDCOLOR\]\#\[$STARTCOLOR\]> \[$ENDCOLOR\]"
 
 # Welcome screen
 echo '       ################################################################'
@@ -20,3 +20,15 @@ echo '       #           | |     | |____    | |   | |____ | | \ \           #'
 echo '       #           |_|     |______|   |_|   |______||_|  \_\          #'
 echo '       #                                                              #'
 echo '       ################################################################'
+
+# User aliases
+alias ..="cd .."
+
+# Vi mode stuff
+set -o vi
+bind 'set show-mode-in-prompt on'
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
+
+export EDITOR='vi'
+export VISUAL='vi'
