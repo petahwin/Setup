@@ -19,13 +19,13 @@ set cursorline
 set clipboard=unnamedplus
 set splitright
 set splitbelow
+set tags=./tags;,tags;./.tags;,.tags;
 " map z za
 
 " leader var stuff
 let mapleader=','
 map <leader><leader> <C-w><C-w>
 map <leader>. gt
-map <C-t> :tabnew<CR>
 
 " gvim settings
 colorscheme desert
@@ -34,4 +34,3 @@ set guifont=Monospace\ 11
 "indent guide settings
 let g:indent_guides_start_level=2
 let g:indent_guides_enable_on_vim_startup=1
- 
