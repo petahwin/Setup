@@ -10,8 +10,6 @@
         msg: '{{ username_output.stdout }}'
   roles:
     - shell
-    - ssh
     - vim
     - tmux
     - utils
-    - lang

@@ -22,7 +22,7 @@ export KEYTIMEOUT=3  # lowers the lag time to switch to normal mode
 function zle-line-init zle-keymap-select {
     VIM_NORMAL_PROMPT="%{$fg_bold[yellow]%}[% N]% %{$reset_color%}:"
     VIM_INS_PROMPT="%{$fg_bold[green]%}[% I]% %{$reset_color%}:"
-    PROMPT="${${KEYMAP/vicmd/$VIM_NORMAL_PROMPT}/(main|viins)/$VIM_INS_PROMPT}%h$ "
+    PROMPT="${SSH_CLIENT:+(%m)}${${KEYMAP/vicmd/$VIM_NORMAL_PROMPT}/(main|viins)/$VIM_INS_PROMPT}%h$ "
     zle reset-prompt
 }
 

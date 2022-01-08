@@ -1,5 +1,5 @@
 - name: Utils | Installing 'tree' cmd line utility
-  pacman:
+  apt:
     name: tree
     state: present
 

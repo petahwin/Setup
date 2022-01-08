@@ -1,5 +1,5 @@
 - name: vim | Install 'vim'
-  pacman:
+  apt:
     name: vim
     state: present
 
