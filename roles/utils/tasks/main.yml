@@ -1,5 +1,0 @@
-- name: Utils | Installing 'tree' cmd line utility
-  apt:
-    name: tree
-    state: present
-

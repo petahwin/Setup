@@ -1,15 +1,14 @@
 - hosts: localhost
+  connection: local
   become: yes
-  tasks:
-    - name: TEST | Set user name
-      command: whoami
-      register: username_output
-      become: no
-    - name: TEST | Show user name
-      debug:
-        msg: '{{ username_output.stdout }}'
+  # tasks:
+  #   - name: TEST | Set user name
+  #     command: whoami
+  #     register: username_output
+  #     become: no
+  #   - name: TEST | Show user name
+  #     debug:
+  #       msg: '{{ username_output.stdout }}'
   roles:
-    - shell
-    - vim
-    - tmux
-    - utils
+    - config
+    - packages

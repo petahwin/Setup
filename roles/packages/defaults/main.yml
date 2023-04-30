@@ -1,0 +1,8 @@
+apt_packages:
+- cowsay
+- git
+- lolcat
+- ssh
+- tmux
+- tree
+- vim

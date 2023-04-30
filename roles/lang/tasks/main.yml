@@ -1,4 +1,0 @@
-- name: lang | Install 'gcc'
-  pacman:
-    name: gcc
-    state: present

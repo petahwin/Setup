@@ -1,0 +1,7 @@
+local_user: "{{ lookup('env','USER') }}"
+config_files:
+- bashrc
+- tmux.conf
+- vimrc
+- zprofile
+- zshrc

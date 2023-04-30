@@ -1,6 +1,0 @@
-- name: tmux | Set '.tmux.conf' file to user's home dir
-  copy:
-    src: tmux.conf
-    dest: /home/peter/.tmux.conf
-    owner: peter
-    group: peter

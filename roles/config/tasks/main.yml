@@ -1,0 +1,13 @@
+- name: config | shell | Set 'zsh' as default for user
+  user:
+    name: "{{ local_user }}"
+    shell: /bin/zsh
+
+- name: config | Install config files
+  copy:
+    src: "{{ item }}"
+    dest: "/home/{{ local_user }}/.{{ item }}"
+    owner: "{{ local_user }}"
+    group: "{{ local_user }}"
+  with_items: "{{ config_files }}"
+
