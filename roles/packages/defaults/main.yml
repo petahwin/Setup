@@ -1,7 +1,9 @@
 apt_packages:
 - cowsay
+- fzf
 - git
 - lolcat
+- ripgrep
 - ssh
 - tmux
 - tree
