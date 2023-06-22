@@ -13,4 +13,4 @@ Currently, the only installation step on Arch Linux is to execute `sudo pacman -
 - Create script to install dependencies for Ansible
 - Create wrapper script to execute Ansible playbook
 - More graceful specification of localhost target for playbook
-
+- Implement remote provisioning, for platforms that are unable to install Ansible
