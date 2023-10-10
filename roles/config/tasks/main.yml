@@ -1,8 +1,3 @@
-- name: config | shell | Set 'zsh' as default for user
-  user:
-    name: "{{ local_user }}"
-    shell: /bin/zsh
-
 - name: config | Install config files
   copy:
     src: "{{ item }}"
@@ -11,3 +6,17 @@
     group: "{{ local_user }}"
   with_items: "{{ config_files }}"
 
+- name: config | shell | Check that 'zsh' is installed
+  stat:
+    path: "{{ zsh_executable_path }}"
+  register: zsh_binary
+
+- name: config | shell | Fail if 'zsh' is not installed
+  fail:
+    msg: "'zsh' executable not found at path '{{ zsh_executable_path }}'"
+  when: not zsh_binary.stat.exists
+
+- name: config | shell | Set 'zsh' as default for user
+  user:
+    name: "{{ local_user }}"
+    shell: "{{ zsh_executable_path }}"

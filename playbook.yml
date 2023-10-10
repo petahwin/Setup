@@ -10,5 +10,5 @@
   #     debug:
   #       msg: '{{ username_output.stdout }}'
   roles:
-    - config
     - packages
+    - config

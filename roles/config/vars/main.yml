@@ -1,4 +1,5 @@
 local_user: "{{ lookup('env','USER') }}"
+zsh_executable_path: "/bin/zsh"
 config_files:
 - bashrc
 - tmux.conf
