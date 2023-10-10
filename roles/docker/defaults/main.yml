@@ -1,0 +1,16 @@
+apt_packages:
+- ca-certificates
+- curl
+- gnupg
+
+docker_apt_packages:
+- docker-ce
+- docker-ce-cli
+- containerd.io
+- docker-buildx-plugin
+- docker-compose-plugin
+
+local_user: "{{ lookup('env','USER') }}"
+
+os_name: raspbian
+os_version_codename: bullseye

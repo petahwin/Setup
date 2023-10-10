@@ -1,0 +1,27 @@
+- name: Docker | Install Dependent Packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ apt_packages }}"
+
+- name: Docker | Add Docker GPG Apt Key
+  apt_key:
+    url: "https://download.docker.com/linux/{{ os_name }}/gpg"
+    state: present
+
+- name: Add Docker Repository
+  apt_repository:
+    repo: "deb https://download.docker.com/linux/{{ os_name }} {{ os_version_codename }} stable"
+    state: present
+
+- name: Docker | Install Docker Packages
+  apt:
+    pkg: "{{ docker_apt_packages }}"
+    state: latest
+    update_cache: true
+
+- name: Docker | Add user "'{{ local_user }}'" to 'docker' group
+  user:
+    name: "{{ local_user }}"
+    groups: docker
+    append: yes
