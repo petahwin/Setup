@@ -12,5 +12,6 @@ docker_apt_packages:
 
 local_user: "{{ lookup('env','USER') }}"
 
+# TODO(peter) Determine the following values dynamically (i.e. to support Ubuntu)
 os_name: raspbian
 os_version_codename: bullseye
